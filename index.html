@@ -7,7 +7,7 @@
 
     <!-- CSS  -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/css/materialize.min.css">
+    <link rel="stylesheet" href="css/materialize-0.97.5.css">
     <link rel="stylesheet" href="css/style.css" type="text/css" media="screen,projection"/>
 </head>
 <body>
@@ -76,7 +76,7 @@
             <div class="col s12 m4">
                 <div class="icon-block">
                     <h2 class="center blue-text text-darken-4"><i class="material-icons">list</i></h2>
-                    <h5 class="center">Project and programme management</h5>
+                    <h5 class="center">Project management</h5>
 
                     <p class="light">Scienta deliver consultancy services within all aspects of programme and project management.
                         Our services range from coaching and advising to delivery of project reviews.</p>
@@ -116,10 +116,6 @@
             <div class="col s12 center">
                 <a name="contact"></a><h4><i class="material-icons">send</i>&nbsp;Contact</h4>
 
-                    <!--<i class="mdi-content-send blue-text text-darken-4"></i></h3>-->
-                <!--<h4>Contact Us</h4></a>-->
-
-                <!--TODO: Avoid hardcoding margins-->
                 <p class="center-align light">
                     <a class="waves-effect waves-light btn blue darken-4" style="margin:6px" href="mailto:post@scienta.no" target="_blank"><i class="material-icons left">mail</i>post@scienta.no</a>
                     <a class="waves-effect waves-light btn blue darken-4" style="margin:6px" href="tel:+4722019035" target="_blank"><i class="material-icons left">phone</i>+47 22 01 90 35</a>
@@ -147,48 +143,27 @@
     <!--<div class="parallax"><img src="img/background3.jpg" alt="Unsplashed background img 3"></div>-->
 <!--</div>-->
 
-<footer class="page-footer blue darken-4">
-    <div class="container">
-        <div class="row">
-            <!--<div class="col l6 s12">-->
-                <!--<h5 class="white-text">Company Bio</h5>-->
-
-                <!--<p class="grey-text text-lighten-4">We are a team of college students working on this project like it's-->
-                    <!--our full time job. Any amount would help support and continue development on this project and is-->
-                    <!--greatly appreciated.</p>-->
-
-                <p class="grey-text text-lighten-4">&copy; 2016 Scienta AS &ndash; Arbinsgt 11, 0253 Oslo, Norway &ndash; +47  22 01 90 35 &ndash; <a href="mailto:post@scient.no">post@scienta.no</a>
-                </p>
-
-
+<footer class="page-footer blue darken-4" style="margin:0; padding:0">
+    <div class="footer-copyright blue darken-4">
+        <div class="container">
+            <div class="row">
+                &copy; 2016 Scienta AS
             </div>
-            <!--<div class="col l3 s12">-->
-                <!--<h5 class="white-text">Settings</h5>-->
-                <!--<ul>-->
-                    <!--<li><a class="white-text" href="#!">Link 1</a></li>-->
-                    <!--<li><a class="white-text" href="#!">Link 2</a></li>-->
-                    <!--<li><a class="white-text" href="#!">Link 3</a></li>-->
-                    <!--<li><a class="white-text" href="#!">Link 4</a></li>-->
-                <!--</ul>-->
-            <!--</div>-->
-            <!--<div class="col l3 s12">-->
-                <!--<h5 class="white-text">Connect</h5>-->
-                <!--<ul>-->
-                    <!--<li><a class="white-text" href="#!">Link 1</a></li>-->
-                    <!--<li><a class="white-text" href="#!">Link 2</a></li>-->
-                    <!--<li><a class="white-text" href="#!">Link 3</a></li>-->
-                    <!--<li><a class="white-text" href="#!">Link 4</a></li>-->
-                <!--</ul>-->
-            <!--</div>-->
-        <!--</div>-->
+        </div>
     </div>
-    <!--<div class="footer-copyright">-->
-        <!--<div class="container">-->
-            <!--&copy; 2016 Scienta AS &ndash; Arbinsgt 11, 0253 Oslo, Norway &ndash; +47  22 01 90 35 &ndash; <a href="mailto:post@scient.no">post@scienta.no</a>-->
-        <!--</div>-->
-    <!--</div>-->
 </footer>
 
+
+<div class="fixed-action-btn" style="bottom: 45px; right: 45px;">
+    <a class="btn-floating btn-large red">
+        <i class="large material-icons">send</i>
+    </a>
+    <ul>
+        <li><a class="btn-floating red" href="mailto:post@scienta.no" target="_blank"><i class="material-icons">mail</i></a></li>
+        <li><a class="btn-floating green" href="tel:+4722019035" target="_blank"><i class="material-icons">phone</i></a></li>
+        <li><a class="btn-floating blue" href="https://goo.gl/maps/1aLgaWUvRYN2" target="_blank"><i class="material-icons">location_on</i></a></li>
+    </ul>
+</div>
 
 <!--  Scripts-->
 <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
