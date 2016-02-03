@@ -79,7 +79,7 @@
                     <h2 class="center blue-text text-darken-4"><i class="material-icons">list</i></h2>
                     <h5 class="center">Project management</h5>
 
-                    <p class="light">Scienta delivers consultancy services within all aspects of programme and project management.
+                    <p class="light">Scienta delivers consultancy services within all aspects of program and project management.
                         Our services range from coaching and advising to delivery of project reviews.</p>
                 </div>
             </div>
@@ -146,6 +146,11 @@
                             position: scientaHQ,
                             title: "Scienta"
                         });
+
+                        var infoWindow = new google.maps.InfoWindow({
+                            content: "<div class='map-info-window'>Scienta AS</div>"
+                        });
+                        infoWindow.open(map, marker);
                     }
                 </script>
                 <script async defer
@@ -170,16 +175,33 @@
     <!--<div class="parallax"><img src="img/background3.jpg" alt="Unsplashed background img 3"></div>-->
 <!--</div>-->
 
-<footer class="page-footer blue darken-4" style="margin:0; padding:0">
-    <div class="footer-copyright blue darken-4">
-        <div class="container">
-            <div class="row">
-                &copy; 2016 Scienta AS
 
-                <a href="https://twitter.com/ScientaIT" target="_blank"><i class="fa fa-twitter white-text" style="margin-left:20px; padding:6px"></i></a>
-                <a href="https://www.linkedin.com/company/scienta-no" target="_blank"><i class="fa fa-linkedin-square white-text" style="padding:6px"></i></a>
+
+<footer class="page-footer blue darken-4">
+    <div class="container">
+        <div class="row">
+            <div class="col l6 s12">
+                <h5 class="white-text">About us</h5>
+
+                <p class="grey-text text-lighten-4">
+                    Scienta AS is an independent IT consulting company based in Oslo.
+                    Scienta aims to succeed where others fail, and to attract and develop the best talents. We can help you from idea to value-generating solution.
+                </p>
+
 
             </div>
+            <div class="col l4 offset-l2 s12">
+                <a class="twitter-timeline" href="https://twitter.com/ScientaIT"  height="100" data-widget-id="694816971066572800">Tweets by @ScientaIT</a>
+                <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+            </div>
+        </div>
+    </div>
+    <div class="footer-copyright">
+        <div class="container">
+            &copy; 2016 Scienta AS
+
+            <a href="https://twitter.com/ScientaIT" target="_blank"><i class="fa fa-twitter white-text" style="margin-left:20px; padding:6px"></i></a>
+            <a href="https://www.linkedin.com/company/scienta-no" target="_blank"><i class="fa fa-linkedin-square white-text" style="padding:6px"></i></a>
         </div>
     </div>
 </footer>
@@ -191,9 +213,9 @@
     <ul>
         <li><a class="btn-floating red" href="mailto:post@scienta.no" target="_blank"><i class="material-icons">mail</i></a></li>
         <li><a class="btn-floating green" href="tel:+4722019035" target="_blank"><i class="material-icons">phone</i></a></li>
-        <li><a class="btn-floating blue" href="https://goo.gl/maps/1aLgaWUvRYN2" target="_blank"><i class="material-icons">location_on</i></a></li>
-        <li><a class="btn-floating orange" href="https://twitter.com/ScientaIT" target="_blank"><i class="fa fa-twitter"></i></a></li>
-        <li><a class="btn-floating cyan" href="https://www.linkedin.com/company/scienta-no" target="_blank"><i class="fa fa-linkedin-square"></i></a></li>
+        <li><a class="btn-floating orange" href="https://goo.gl/maps/1aLgaWUvRYN2" target="_blank"><i class="material-icons">location_on</i></a></li>
+        <li><a class="btn-floating blue" href="https://twitter.com/ScientaIT" target="_blank"><i class="fa fa-twitter"></i></a></li>
+        <li><a class="btn-floating blue darken-3" href="https://www.linkedin.com/company/scienta-no" target="_blank"><i class="fa fa-linkedin-square"></i></a></li>
     </ul>
 </div>
 
