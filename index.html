@@ -8,8 +8,27 @@
     <!-- CSS  -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="stylesheet" href="fonts/font-awesome-4.5.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="css/materialize-0.97.5.css">
+    <!--<link rel="stylesheet" href="css/materialize-0.97.5.css">-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/css/materialize.min.css">
+
     <link rel="stylesheet" href="css/style.css" type="text/css" media="screen,projection"/>
+
+    <script>
+        function expandTjeneste(id) {
+            $(".tjeneste").hide();
+            $("#" + id).show();
+            scrollTo(id);
+        }
+
+        function collapseTjenester() {
+            $(".tjeneste").hide();
+            scrollTo("tjenester");
+        }
+
+        function scrollTo(id) {
+            $('html, body').animate({scrollTop: $("#" + id).offset().top}, 400);
+        }
+    </script>
 </head>
 <body>
 <nav class="kingblue" role="navigation">
@@ -48,55 +67,89 @@
 </div>
 
 
-<div class="container">
+<div id="tjenester" class="container">
     <div class="section">
 
-        <!--   Icon Section   -->
         <div class="row">
-            <div class="col s12 m4">
+            <div class="col s12 m4" onclick="expandTjeneste('utviklere')" style="cursor:pointer" onmouseover="$('#expandUtviklere').show()" onmouseout="$('#expandUtviklere').hide()">
                 <div class="icon-block">
                     <h2 class="center blue-text text-darken-4"><i class="material-icons">usb</i></h2>
                     <h5 class="center">Erfarne utviklere</h5>
 
                     <p class="light">
-                        Scientas konsulenter har ledende roller innen utvikling av komplekse og kritiske IT-systemer.
-
-                        Hos oss finner du profilerte fagpersoner med spesialkompetanse innenfor Java, smidig utvikling, tjenesteorientering,
-                        big data, automatisert testing m.m.
+                        Systemutvikling / Integrasjon / Java / Smidig / Big Data / Automatisert test
                     </p>
+
+                    <h5 class="center" style="height:24px">
+                        <a id="expandUtviklere" style="display:none" class="btn-floating waves-effect waves-light red" onclick="expandTjeneste('utviklere')"><i class="material-icons">add</i></a>
+                    </h5>
                 </div>
             </div>
 
-            <div class="col s12 m4">
+            <div class="col s12 m4" onclick="expandTjeneste('produkteiere')" style="cursor:pointer" onmouseover="$('#expandProdukteiere').show()" onmouseout="$('#expandProdukteiere').hide()">
                 <div class="icon-block">
                     <h2 class="center blue-text text-darken-4"><i class="material-icons">equalizer</i></h2>
                     <h5 class="center">Produkteiere og arkitekter</h5>
 
                     <p class="light">
-                        Scienta bidrar til at IT-leveranser under&shy;støtter kundens mål og behov, og gir kostnads&shy;effektiv utvikling og forvaltning.
-
-                        Våre tjenester inkluderer krav&shy;spesifisering, løsnings&shy;arkitektur, nytte- og kostnads&shy;estimering,
-                        kvalitets&shy;sikring og prosess&shy;forbedring.
+                        Krav&shy;spesifisering / Løsnings&shy;arkitektur / Estimering / Kvalitets&shy;sikring / Prosess
                     </p>
 
+                    <h5 class="center" style="height:24px">
+                        <a id="expandProdukteiere" style="display:none" class="btn-floating waves-effect waves-light red" onclick="expandTjeneste('produkteiere')"><i class="material-icons">add</i></a>
+                    </h5>
                 </div>
             </div>
 
-            <div class="col s12 m4">
+            <div class="col s12 m4" onclick="expandTjeneste('prosjektledere')" style="cursor:pointer" onmouseover="$('#expandProsjektledere').show()" onmouseout="$('#expandProsjektledere').hide()">
                 <div class="icon-block">
                     <h2 class="center blue-text text-darken-4"><i class="material-icons">list</i></h2>
                     <h5 class="center">Prosjektledere</h5>
 
                     <p class="light">
-
-                        Scienta leverer konsulent&shy;tjenester innen alle aspekter av program- og prosjekt&shy;ledelse.
-                        Vi tilbyr blant annet erfarne program- og prosjekt&shy;ledere, støtte til program- og prosjekt&shy;kontor, testledere, coaching
-                        og gjennomgang av prosjekter.
+                        Program- og prosjekt&shy;ledelse / Testledelse / Coaching / Prosjektgjennomgang
                     </p>
+                    <h5 class="center" style="height:24px">
+                        <a id="expandProsjektledere" class="btn-floating waves-effect waves-light red" style="display:none" onclick="expandTjeneste('prosjektledere')"><i class="material-icons">add</i></a>
+                    </h5>
                 </div>
             </div>
         </div>
 
+        <div id="utviklere" class="row tjeneste" style="display:none">
+            <div class="col s12 m12">
+                <h5 class="center">Erfarne utviklere</h5>
+                <p class="light">
+                    Scientas konsulenter har ledende roller innen utvikling av komplekse og kritiske IT-systemer.
+                    Hos oss finner du profilerte fagpersoner med spesialkompetanse innenfor Java, smidig utvikling, tjenesteorientering,
+                    big data, automatisert testing m.m.
+                </p>
+                <a class="right waves-effect waves-light btn" onclick="collapseTjenester()">Lukk</a>
+            </div>
+        </div>
+        <div id="produkteiere" class="row tjeneste" style="display:none">
+            <div class="col s12 m12">
+                <h5 class="center">Produkteiere og arktitekter</h5>
+                <p class="light">
+                    Scienta bidrar til at IT-leveranser under&shy;støtter kundens mål og behov, og gir kostnads&shy;effektiv utvikling og forvaltning.
+
+                    Våre tjenester inkluderer krav&shy;spesifisering, løsnings&shy;arkitektur, virksomhets&shy;arkitektur, nytte- og kostnads&shy;estimering,
+                    kvalitets&shy;sikring og prosess&shy;forbedring.
+                </p>
+                <a class="right waves-effect waves-light btn" onclick="collapseTjenester()">Lukk</a>
+            </div>
+        </div>
+        <div id="prosjektledere" class="row tjeneste" style="display:none">
+            <div class="col s12 m12">
+                <h5 class="center">Prosjektledere</h5>
+                <p class="light">
+                    Scienta leverer konsulent&shy;tjenester innen alle aspekter av program- og prosjekt&shy;ledelse.
+                    Vi tilbyr blant annet erfarne program- og prosjekt&shy;ledere, støtte til program- og prosjekt&shy;kontor, testledere, coaching
+                    og gjennomgang av prosjekter.
+                </p>
+                <a class="right waves-effect waves-light btn" onclick="collapseTjenester()">Lukk</a>
+            </div>
+        </div>
     </div>
 </div>
 
