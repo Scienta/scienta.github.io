@@ -16,48 +16,38 @@
     <script>
         function expandJobb() {
             $("#expandJobb").hide();
-            $("#jobb").show("fade");
+            $("#jobbdetalj").show("fade");
         }
 
         function collapseJobb() {
-            $("#jobb").hide("fade", function (){$("#expandJobb").show()});
+            $("#jobbdetalj").hide("fade", function (){$("#expandJobb").show()});
         }
 
+        function scrollTo(id) {
+            $('html, body').animate({scrollTop: $("#" + id).offset().top}, 400);
+        }
     </script>
 </head>
 <body>
 <nav class="kingblue" role="navigation">
     <div class="nav-wrapper container">
-        <a id="logo-container" href="#" ><img class="brand-logo" src="img/scienta_logo_white.png" style="height: 60px; padding: 5px"> </a>
-        <!--<ul class="right hide-on-med-and-down">-->
-            <!--<li><a href="#contact">Contact</a></li>-->
-        <!--</ul>-->
+        <img src="img/scienta_logo_white.png" style="vertical-align:middle; height:40px; padding-left: 15px; padding-bottom: 8px">
+        <ul class="right hide-on-med-and-down">
+            <li><a href="javascript:scrollTo('tjenester')" class="white-text">Tjenester</a></li>
+            <li><a href="javascript:scrollTo('jobb')" class="white-text">Jobb</a></li>
+            <li><a href="javascript:scrollTo('kontakt')" class="white-text">Kontakt</a></li>
+        </ul>
 
-        <!--<ul id="nav-mobile" class="side-nav">-->
-            <!--<li><a href="#contact">Contact</a></li>-->
-        <!--</ul>-->
-        <!--<a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>-->
+        <ul id="nav-mobile" class="side-nav">
+            <li><a href="javascript:scrollTo('tjenester')">Tjenester</a></li>
+            <li><a href="javascript:scrollTo('jobb')">Jobb</a></li>
+            <li><a href="javascript:scrollTo('kontakt')">Kontakt</a></li>
+        </ul>
+        <a href="#" data-activates="nav-mobile" class="button-collapse white-text"><i class="material-icons">menu</i></a>
     </div>
 </nav>
 
-<div id="index-banner" class="parallax-container">
-    <div class="section no-pad-bot">
-        <div class="container">
-            <br><br>
-
-            <!--<h1 class="header center teal-text text-lighten-2">Making IT your winning asset</h1>-->
-
-            <!--<div class="row center">-->
-                <!--<h5 class="header col s12 light">Making IT your winning asset</h5>-->
-            <!--</div>-->
-            <!--<div class="row center">-->
-                <!--<a href="http://materializecss.com/getting-started.html" id="download-button"-->
-                   <!--class="btn-large waves-effect waves-light teal lighten-1">Get Started</a>-->
-            <!--</div>-->
-            <!--<br><br>-->
-
-        </div>
-    </div>
+<div class="parallax-container hide-on-small-and-down">
     <div class="parallax"><img src="img/background-train.jpg" alt=""></div>
 </div>
 
@@ -148,8 +138,7 @@
     </div>
 </div>
 
-<div class="container">
-<!--<div class="container" style="border-top: 1px solid lightgrey">-->
+<div id="jobb" class="container">
     <div class="section">
 
         <div class="row">
@@ -181,8 +170,7 @@
             </div>
         </div>
 
-
-        <div id="jobb" class="row" style="display:none">
+        <div id="jobbdetalj" class="row" style="display:none">
             <div class="col s12 m12">
                 <div class="card teal">
                     <div class="card-content white-text">
@@ -210,23 +198,16 @@
     </div>
 </div>
 
-<div class="parallax-container valign-wrapper">
-    <div class="section no-pad-bot">
-        <div class="container">
-            <div class="row center">
-                <!--<h5 class="header col s12 black-text">Scienta puts your software project back on track</h5>-->
-            </div>
-        </div>
-    </div>
+<div class="parallax-container hide-on-small-and-down">
     <div class="parallax"><img src="img/island.jpg" alt=""></div>
 </div>
 
-<div class="container">
+<div id="kontakt" class="container">
     <div class="section">
 
         <div class="row">
             <div class="col s12 center">
-                <a name="contact"></a><h4><i class="material-icons">send</i>&nbsp;Kontakt</h4>
+                <h4><i class="material-icons">send</i>&nbsp;Kontakt</h4>
 
                 <p class="center-align light">
                     <a class="waves-effect waves-light btn blue darken-4" style="margin:6px" href="mailto:post@scienta.no" target="_blank"><i class="material-icons left">mail</i>post@scienta.no</a>
