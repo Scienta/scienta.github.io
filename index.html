@@ -8,26 +8,21 @@
     <!-- CSS  -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="stylesheet" href="fonts/font-awesome-4.5.0/css/font-awesome.min.css">
-    <!--<link rel="stylesheet" href="css/materialize-0.97.5.css">-->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/css/materialize.min.css">
+    <link rel="stylesheet" href="css/materialize-0.97.5.css">
+    <!--<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/css/materialize.min.css">-->
 
     <link rel="stylesheet" href="css/style.css" type="text/css" media="screen,projection"/>
 
     <script>
-        function expandTjeneste(id) {
-            $(".tjeneste").hide();
-            $("#" + id).show();
-            scrollTo(id);
+        function expandJobb() {
+            $("#expandJobb").hide();
+            $("#jobb").show("fade");
         }
 
-        function collapseTjenester() {
-            $(".tjeneste").hide();
-            scrollTo("tjenester");
+        function collapseJobb() {
+            $("#jobb").hide("fade", function (){$("#expandJobb").show()});
         }
 
-        function scrollTo(id) {
-            $('html, body').animate({scrollTop: $("#" + id).offset().top}, 400);
-        }
     </script>
 </head>
 <body>
@@ -66,93 +61,154 @@
     <div class="parallax"><img src="img/background-train.jpg" alt=""></div>
 </div>
 
-
 <div id="tjenester" class="container">
     <div class="section">
 
         <div class="row">
-            <div class="col s12 m4" onclick="expandTjeneste('utviklere')" style="cursor:pointer" onmouseover="$('#expandUtviklere').show()" onmouseout="$('#expandUtviklere').hide()">
-                <div class="icon-block">
-                    <h2 class="center blue-text text-darken-4"><i class="material-icons">usb</i></h2>
-                    <h5 class="center">Erfarne utviklere</h5>
-
-                    <p class="light">
-                        Systemutvikling / Integrasjon / Java / Smidig / Big Data / Automatisert test
-                    </p>
-
-                    <h5 class="center" style="height:24px">
-                        <a id="expandUtviklere" style="display:none" class="btn-floating waves-effect waves-light red" onclick="expandTjeneste('utviklere')"><i class="material-icons">add</i></a>
-                    </h5>
-                </div>
-            </div>
-
-            <div class="col s12 m4" onclick="expandTjeneste('produkteiere')" style="cursor:pointer" onmouseover="$('#expandProdukteiere').show()" onmouseout="$('#expandProdukteiere').hide()">
-                <div class="icon-block">
-                    <h2 class="center blue-text text-darken-4"><i class="material-icons">equalizer</i></h2>
-                    <h5 class="center">Produkteiere og arkitekter</h5>
-
-                    <p class="light">
-                        Krav&shy;spesifisering / Løsnings&shy;arkitektur / Estimering / Kvalitets&shy;sikring / Prosess
-                    </p>
-
-                    <h5 class="center" style="height:24px">
-                        <a id="expandProdukteiere" style="display:none" class="btn-floating waves-effect waves-light red" onclick="expandTjeneste('produkteiere')"><i class="material-icons">add</i></a>
-                    </h5>
-                </div>
-            </div>
-
-            <div class="col s12 m4" onclick="expandTjeneste('prosjektledere')" style="cursor:pointer" onmouseover="$('#expandProsjektledere').show()" onmouseout="$('#expandProsjektledere').hide()">
-                <div class="icon-block">
-                    <h2 class="center blue-text text-darken-4"><i class="material-icons">list</i></h2>
-                    <h5 class="center">Prosjektledere</h5>
-
-                    <p class="light">
-                        Program- og prosjekt&shy;ledelse / Testledelse / Coaching / Prosjektgjennomgang
-                    </p>
-                    <h5 class="center" style="height:24px">
-                        <a id="expandProsjektledere" class="btn-floating waves-effect waves-light red" style="display:none" onclick="expandTjeneste('prosjektledere')"><i class="material-icons">add</i></a>
-                    </h5>
-                </div>
+            <div class="col s12 center">
+                <h4>Tjenester</h4>
             </div>
         </div>
 
-        <div id="utviklere" class="row tjeneste" style="display:none">
-            <div class="col s12 m12">
-                <h5 class="center">Erfarne utviklere</h5>
-                <p class="light">
-                    Scientas konsulenter har ledende roller innen utvikling av komplekse og kritiske IT-systemer.
-                    Hos oss finner du profilerte fagpersoner med spesialkompetanse innenfor Java, smidig utvikling, tjenesteorientering,
-                    big data, automatisert testing m.m.
-                </p>
-                <a class="right waves-effect waves-light btn" onclick="collapseTjenester()">Lukk</a>
-            </div>
-        </div>
-        <div id="produkteiere" class="row tjeneste" style="display:none">
-            <div class="col s12 m12">
-                <h5 class="center">Produkteiere og arktitekter</h5>
-                <p class="light">
-                    Scienta bidrar til at IT-leveranser under&shy;støtter kundens mål og behov, og gir kostnads&shy;effektiv utvikling og forvaltning.
+        <div class="row">
+            <div class="col s12 m4">
+                <div class="card medium hoverable">
+                    <div class="card-image waves-effect waves-block waves-light">
+                        <img class="activator" src="img/background-train.jpg">
+                    </div>
+                    <div class="card-content">
+                        <span class="card-title activator grey-text text-darken-4">Erfarne utviklere<i class="material-icons right">more_vert</i></span>
+                        <p class="light">Systemutvikling / Integrasjon / Java / Smidig / Big Data / Automatisert test</p>
+                    </div>
+                    <div class="card-reveal">
+                        <span class="card-title grey-text text-darken-4">Erfarne utviklere<i class="material-icons right">close</i></span>
+                        <p class="light">
+                            Scientas konsulenter har ledende roller innen utvikling av komplekse og kritiske IT-systemer.
+                        </p>
+                        <p class="light">
+                            Hos oss finner du profilerte fagpersoner med spesialkompetanse innenfor Java, smidig utvikling, tjenesteorientering,
+                            big data, automatisert testing m.m.
+                        </p>
 
-                    Våre tjenester inkluderer krav&shy;spesifisering, løsnings&shy;arkitektur, virksomhets&shy;arkitektur, nytte- og kostnads&shy;estimering,
-                    kvalitets&shy;sikring og prosess&shy;forbedring.
-                </p>
-                <a class="right waves-effect waves-light btn" onclick="collapseTjenester()">Lukk</a>
+                        <!--<p class="light"> Tar ansvar i prosjektene og motiveres av å finne kostnadseffektive løsninger på komplekse problemer</p>-->
+                        <!--<p class="light">Dyktige og engasjerte fagpersoner som har valgt en teknologisk karrierevei</p>-->
+                        <!--<p class="light">De fleste med mer enn 10 års erfaring fra utvikling av forretningskritiske systemer for kunder i privat og offentlig sektor</p>-->
+                        <!--<p class="light">Spesielt tunge innen utvikling på Java-plattformen og i bruk av smidige metoder</p>-->
+                        <!--<p class="light">95% med mastergrad, 20% med ph.d.</p>-->
+                        <!--<p class="light">Ledende fagpersoner som er aktive i fagmiljøene og oppdatert på ny teknologi</p>-->
+                    </div>
+                </div>
+
             </div>
-        </div>
-        <div id="prosjektledere" class="row tjeneste" style="display:none">
-            <div class="col s12 m12">
-                <h5 class="center">Prosjektledere</h5>
-                <p class="light">
-                    Scienta leverer konsulent&shy;tjenester innen alle aspekter av program- og prosjekt&shy;ledelse.
-                    Vi tilbyr blant annet erfarne program- og prosjekt&shy;ledere, støtte til program- og prosjekt&shy;kontor, testledere, coaching
-                    og gjennomgang av prosjekter.
-                </p>
-                <a class="right waves-effect waves-light btn" onclick="collapseTjenester()">Lukk</a>
+
+            <div class="col s12 m4">
+                <div class="card medium hoverable">
+                    <div class="card-image waves-effect waves-block waves-light">
+                        <img class="activator" src="img/background-train.jpg">
+                    </div>
+                    <div class="card-content">
+                        <span class="card-title activator grey-text text-darken-4">Produkteiere og arkitekter<i class="material-icons right">more_vert</i></span>
+                        <p class="light">Krav&shy;spesifisering / Løsnings&shy;arkitektur / Estimering / Kvalitets&shy;sikring</p>
+                    </div>
+                    <div class="card-reveal">
+                        <span class="card-title grey-text text-darken-4">Produkteiere og arkitekter<i class="material-icons right">close</i></span>
+                        <p class="light">
+                            Scienta bidrar til at IT-leveranser under&shy;støtter kundens mål og behov, og gir kostnads&shy;effektiv utvikling og forvaltning.
+                        </p>
+                        <p class="light">
+                            Våre tjenester inkluderer krav&shy;spesifisering, løsnings&shy;arkitektur, virksomhets&shy;arkitektur, nytte- og kostnads&shy;estimering,
+                            kvalitets&shy;sikring og prosess&shy;forbedring.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col s12 m4">
+                <div class="card medium hoverable">
+                    <div class="card-image waves-effect waves-block waves-light">
+                        <img class="activator" src="img/background.png">
+                    </div>
+                    <div class="card-content">
+                        <span class="card-title activator grey-text text-darken-4">Prosjektledere<i class="material-icons right">more_vert</i></span>
+                        <p class="light">Program- og prosjekt&shy;ledelse / Test&shy;ledelse&nbsp;/ Coaching / Prosjekt&shy;gjennomgang</p>
+                    </div>
+                    <div class="card-reveal">
+                        <span class="card-title grey-text text-darken-4">Prosjektledere<i class="material-icons right">close</i></span>
+                        <p class="light">
+                            Scienta leverer konsulent&shy;tjenester innen alle aspekter av program- og prosjekt&shy;ledelse.
+                        </p>
+                        <p class="light">
+                            Vi tilbyr blant annet erfarne program- og prosjekt&shy;ledere, støtte til program- og prosjekt&shy;kontor, testledere, coaching
+                            og gjennomgang av prosjekter.
+                        </p>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
 </div>
 
+<div class="container">
+<!--<div class="container" style="border-top: 1px solid lightgrey">-->
+    <div class="section">
+
+        <div class="row">
+            <div class="col s12 center">
+                <h4><i class="small material-icons">person_add</i>&nbsp;&nbsp;Jobb i Scienta?</h4>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col s12 m6">
+                <h5 class="center">Fast jobb</h5>
+                <p class="light">
+                    På jakt etter nye utfordringer? Vi trenger flinke folk og ønsker å snakke med deg.
+                </p>
+            </div>
+            <div class="col s12 m6">
+                <h5 class="center">Underleverandør</h5>
+                <p class="light">
+                    Jobber du som selvstendig konsulent? Vi trenger underleverandører til våre prosjekter.
+                </p>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col s12">
+                <div class="center">
+                    <a id="expandJobb" class="waves-effect waves-light btn" onclick="expandJobb()">Se hva vi tilbyr</a>
+                </div>
+            </div>
+        </div>
+
+
+        <div id="jobb" class="row" style="display:none">
+            <div class="col s12 m12">
+                <div class="card teal">
+                    <div class="card-content white-text">
+                        <span class="card-title">Hva vi tilbyr</span>
+
+                        <p>I Scienta får du jobbe sammen med dyktige og engasjerte fagpersoner som har valgt en teknologisk karrierevei.
+                            Vi tilbyr gode muligheter for videre faglig utvikling og du får delta i utvikling av forretningskritiske systemer for våre kunder.</p>
+
+                        <p>Våre lønnsbetingelser er svært konkurransedyktige, og vi prioriterer å bruke ressurser på at våre ansatte skal ha
+                            det så bra som mulig på jobb.
+                        </p>
+
+                        <p>Ønsker du å bli vår neste ansatte eller underleverandør?  Send oss en epost med din CV eller LinkedIn-profil så tar vi kontakt med deg.</p>
+
+                    </div>
+                    <div class="card-action">
+                        <a class="right" href="javascript:collapseJobb()">Lukk</a>
+                        <a href="mailto:post@scienta.no?subject=Jobb+i+Scienta&body=Hei.+Se+vedlagte+CV." target="_blank">Send oss en epost</a>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
 
 <div class="parallax-container valign-wrapper">
     <div class="section no-pad-bot">
@@ -277,6 +333,7 @@
 
 <!--  Scripts-->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/js/materialize.min.js"></script>
 <script src="js/init.js"></script>
 
