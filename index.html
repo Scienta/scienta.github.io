@@ -14,57 +14,52 @@
     <link rel="stylesheet" href="css/style.css" type="text/css" media="screen,projection"/>
 
     <script>
-        function expandJobb() {
-            $("#expandJobb").hide();
-            $("#jobbdetalj").show("fade");
-        }
-
-        function collapseJobb() {
-            $("#jobbdetalj").hide("fade", function (){$("#expandJobb").show()});
-        }
-
         function scrollTo(id) {
-            $('html, body').animate({scrollTop: $("#" + id).offset().top}, 400);
+            $('html, body').animate({scrollTop: $("#" + id).offset().top - 60}, 400);
         }
     </script>
 </head>
 <body>
-<nav class="kingblue" role="navigation">
-    <div class="nav-wrapper container">
-        <img src="img/scienta_logo_white.png" style="vertical-align:middle; height:40px; padding-left: 15px; padding-bottom: 8px">
-        <ul class="right hide-on-med-and-down">
-            <li><a href="javascript:scrollTo('tjenester')" class="white-text">Tjenester</a></li>
-            <li><a href="javascript:scrollTo('jobb')" class="white-text">Jobb</a></li>
-            <li><a href="javascript:scrollTo('kontakt')" class="white-text">Kontakt</a></li>
-        </ul>
 
-        <ul id="nav-mobile" class="side-nav">
-            <li><a href="javascript:scrollTo('tjenester')">Tjenester</a></li>
-            <li><a href="javascript:scrollTo('jobb')">Jobb</a></li>
-            <li><a href="javascript:scrollTo('kontakt')">Kontakt</a></li>
-        </ul>
-        <a href="#" data-activates="nav-mobile" class="button-collapse white-text"><i class="material-icons">menu</i></a>
-    </div>
-</nav>
+<div class="navbar-fixed">
+    <nav class="kingblue" role="navigation">
+        <div class="nav-wrapper container">
+            <img src="img/scienta_logo_white.png" style="vertical-align:middle; height:40px; padding-left: 15px; padding-bottom: 8px">
+            <ul class="right hide-on-med-and-down">
+                <li><a href="javascript:scrollTo('tjenester')" class="white-text">Tjenester</a></li>
+                <li><a href="javascript:scrollTo('jobb')" class="white-text">Jobb</a></li>
+                <li><a href="javascript:scrollTo('kontakt')" class="white-text">Kontakt</a></li>
+            </ul>
 
-<div class="parallax-container hide-on-small-and-down">
-    <div class="parallax"><img src="img/background-train.jpg" alt=""></div>
+            <ul id="nav-mobile" class="side-nav">
+                <li><a href="javascript:scrollTo('tjenester')">Tjenester</a></li>
+                <li><a href="javascript:scrollTo('jobb')">Jobb</a></li>
+                <li><a href="javascript:scrollTo('kontakt')">Kontakt</a></li>
+            </ul>
+            <a href="#" data-activates="nav-mobile" class="button-collapse white-text"><i class="material-icons">menu</i></a>
+        </div>
+    </nav>
 </div>
+
+<!--<div class="parallax-container hide-on-small-and-down">-->
+    <!--<div class="parallax"><img src="img/background-train.jpg" alt=""></div>-->
+<!--</div>-->
 
 <div id="tjenester" class="container">
     <div class="section">
 
-        <div class="row">
-            <div class="col s12 center">
-                <h4>Tjenester</h4>
-            </div>
-        </div>
+        <div style="height:40px"></div>
+        <!--<div class="row">-->
+            <!--<div class="col s12 center">-->
+                <!--<h4>Tjenester</h4>-->
+            <!--</div>-->
+        <!--</div>-->
 
         <div class="row">
             <div class="col s12 m4">
-                <div class="card medium hoverable">
+                <div class="card hoverable">
                     <div class="card-image waves-effect waves-block waves-light">
-                        <img class="activator" src="img/background-train.jpg">
+                        <img class="activator" src="img/utvikler.jpg">
                     </div>
                     <div class="card-content">
                         <span class="card-title activator grey-text text-darken-4">Erfarne utviklere<i class="material-icons right">more_vert</i></span>
@@ -92,9 +87,9 @@
             </div>
 
             <div class="col s12 m4">
-                <div class="card medium hoverable">
+                <div class="card hoverable">
                     <div class="card-image waves-effect waves-block waves-light">
-                        <img class="activator" src="img/background-train.jpg">
+                        <img class="activator" src="img/arkitekt.jpg">
                     </div>
                     <div class="card-content">
                         <span class="card-title activator grey-text text-darken-4">Produkteiere og arkitekter<i class="material-icons right">more_vert</i></span>
@@ -114,9 +109,9 @@
             </div>
 
             <div class="col s12 m4">
-                <div class="card medium hoverable">
+                <div class="card hoverable">
                     <div class="card-image waves-effect waves-block waves-light">
-                        <img class="activator" src="img/background.png">
+                        <img class="activator" src="img/prosjektleder.jpg">
                     </div>
                     <div class="card-content">
                         <span class="card-title activator grey-text text-darken-4">Prosjektledere<i class="material-icons right">more_vert</i></span>
@@ -144,31 +139,53 @@
         <div class="row">
             <div class="col s12 center">
                 <h4><i class="small material-icons">person_add</i>&nbsp;&nbsp;Jobb i Scienta?</h4>
+                <h6>Vi ønsker oss flere ansatte og underleverandører</h6>
             </div>
         </div>
 
         <div class="row">
-            <div class="col s12 m6">
-                <h5 class="center">Fast jobb</h5>
-                <p class="light">
-                    På jakt etter nye utfordringer? Vi trenger flinke folk og ønsker å snakke med deg.
-                </p>
-            </div>
-            <div class="col s12 m6">
-                <h5 class="center">Underleverandør</h5>
-                <p class="light">
-                    Jobber du som selvstendig konsulent? Vi trenger underleverandører til våre prosjekter.
-                </p>
-            </div>
-        </div>
+            <div class="col m6 s12">
+                <p class="light">I Scienta får du jobbe sammen med dyktige og engasjerte fagpersoner som har valgt en teknologisk karrierevei.
+                    Vi tilbyr gode muligheter for videre faglig utvikling og du får delta i utvikling av forretningskritiske systemer for våre kunder.</p>
 
-        <div class="row">
-            <div class="col s12">
+                <p class="light">Våre lønnsbetingelser er svært konkurransedyktige, og vi prioriterer å bruke ressurser på at våre ansatte skal ha
+                    det så bra som mulig på jobb.
+                </p>
+
+                <p class="light">Ønsker du å bli vår neste ansatte eller underleverandør?  Send oss en epost med din CV eller LinkedIn-profil så tar vi kontakt med deg.</p>
+
                 <div class="center">
-                    <a id="expandJobb" class="waves-effect waves-light btn" onclick="expandJobb()">Se hva vi tilbyr</a>
+                    <a href="mailto:post@scienta.no?subject=Jobb+i+Scienta&body=Hei.+Se+vedlagte+CV." target="_blank" class="waves-effect waves-light btn">Kontakt oss</a>
                 </div>
             </div>
+
+            <div class="col m6 s12">
+                <img src="img/sosialt.jpg" class="z-depth-3" style="width:100%; height:100%; margin-top:20px">
+            </div>
         </div>
+
+        <!--<div class="row">-->
+            <!--<div class="col s12 m6">-->
+                <!--<h5 class="center">Fast jobb</h5>-->
+                <!--<p class="light">-->
+                    <!--På jakt etter nye utfordringer? Vi trenger flinke folk og ønsker å snakke med deg.-->
+                <!--</p>-->
+            <!--</div>-->
+            <!--<div class="col s12 m6">-->
+                <!--<h5 class="center">Underleverandør</h5>-->
+                <!--<p class="light">-->
+                    <!--Jobber du som selvstendig konsulent? Vi trenger underleverandører til våre prosjekter.-->
+                <!--</p>-->
+            <!--</div>-->
+        <!--</div>-->
+
+        <!--<div class="row">-->
+            <!--<div class="col s12">-->
+                <!--<div class="center">-->
+                    <!--<a id="expandJobb" class="waves-effect waves-light btn" onclick="expandJobb()">Se hva vi tilbyr</a>-->
+                <!--</div>-->
+            <!--</div>-->
+        <!--</div>-->
 
         <div id="jobbdetalj" class="row" style="display:none">
             <div class="col s12 m12">
@@ -176,6 +193,7 @@
                     <div class="card-content white-text">
                         <span class="card-title">Hva vi tilbyr</span>
 
+                        <img src="img/sosialt.jpg" width="600px">
                         <p>I Scienta får du jobbe sammen med dyktige og engasjerte fagpersoner som har valgt en teknologisk karrierevei.
                             Vi tilbyr gode muligheter for videre faglig utvikling og du får delta i utvikling av forretningskritiske systemer for våre kunder.</p>
 
