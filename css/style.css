@@ -74,4 +74,5 @@ footer.page-footer {
 .ansatt-card-email {
     font-size: 12px !important;
     line-height: 20px !important;
+    display: none;
  }
