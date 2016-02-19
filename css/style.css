@@ -40,3 +40,16 @@ footer.page-footer {
 .kingblue {
     background-color: rgb(6, 6, 192)
 }
+
+.tjeneste-card-title {
+    font-weight: 400 !important;
+    font-size: 20px !important;
+    line-height: 22px !important;
+}
+
+.tjeneste-card-text {
+    font-size: 14px !important;
+    margin-top: 6px !important;
+    line-height: 24px !important;
+    cursor: pointer;
+}
