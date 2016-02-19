@@ -53,3 +53,25 @@ footer.page-footer {
     line-height: 24px !important;
     cursor: pointer;
 }
+
+.ansatt-card-image {
+    max-height: 70% !important;
+}
+
+.ansatt-card-content {
+    max-height: 30% !important;
+}
+
+.ansatt-card-name {
+    font-size: 16px !important;
+ }
+
+.ansatt-card-title {
+    font-size: 14px !important;
+    line-height: 18px !important;
+ }
+
+.ansatt-card-email {
+    font-size: 12px !important;
+    line-height: 20px !important;
+ }
